@@ -1,16 +1,15 @@
-# Week 2: Alert Management & SOC Operations
+# Week 2: SOC Alert Management & Documentation
 
-## 1. Alert Classification System
-This folder contains the mapping of security alerts to the MITRE ATT&CK framework.
+This folder contains the complete documentation for the Alert Management lifecycle.
 
-| Alert ID | Threat Type | Priority | MITRE Tactic | MITRE Technique | Response Action |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 001 | Phishing Email | High | Initial Access | T1566 | Isolate Host |
-| 002 | SSH Brute Force | Medium | Credential Access | T1110 | Block Source IP |
-| 003 | Log4Shell Exploit | Critical | Initial Access | T1190 | Patch / WAF |
-| 004 | SQL Injection | High | Initial Access | T1190 | Block IP / WAF |
+## 📂 Contents
+- [Alert Classification](./alert_classification.md): Mapping detections to MITRE ATT&CK.
+- [Prioritization Logic](./prioritization_logic.md): CVSS-based scoring system for triage.
+- [Incident Ticket Template](./incident_ticket.md): Sample ransomware ticket with IOCs.
+- [Escalation Procedure](./escalation_email.md): Professional communication for Tier 2 support.
+- [Master Workflow](./workflow_steps.md): The step-by-step SOP for incident response.
 
-## 2. Workflows & Procedures
-Detailed steps for incident response and escalation.
-- [Log4Shell Response Procedure](./Workflows/Log4Shell_Workflow.md)
-- [Escalation Email Template](./Workflows/Escalation_Template.md)
+## 🛠️ Tools Used
+- **Wazuh:** For SIEM/XDR detection.
+- **MITRE ATT&CK:** For threat categorization.
+- **GitHub:** For SOC Portfolio and Documentation.
