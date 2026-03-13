@@ -1,6 +1,4 @@
 # Lab Task 1: Advanced Log Analysis
-**Date:** 2026-03-13  
-**Role:** Senior SOC Engineer (Simulation)  
 **Tools:** Elastic Security (ELK Stack), Sysmon, Kali Linux  
 
 ---
