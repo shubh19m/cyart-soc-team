@@ -1,6 +1,4 @@
 # Capstone Project: Comprehensive SOC Incident Response Simulation
-**Date:** 2025-08-18  
-**Project Lead:** [Your Name]  
 **Infrastructure:** Metasploitable2 (Target), Kali Linux (Attacker), Wazuh (SIEM), TheHive (CMS), CrowdSec (IPS), MITRE Caldera (Emulation), Elastic Security (Metrics)
 
 ---
