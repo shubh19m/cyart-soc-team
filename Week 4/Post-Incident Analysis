@@ -1,0 +1,48 @@
+# Theoretical Knowledge: Post-Incident Analysis & Continuous Improvement
+**Focus:** RCA, Lessons Learned, and Performance Metrics  
+
+---
+
+## 3.1 Root Cause Analysis (RCA)
+RCA is the process of discovering the "True North" of why a breach occurred. It moves beyond the technical symptoms to find systemic weaknesses.
+
+### Primary Techniques:
+* **The 5 Whys:** A simple but effective method of drilling down into a problem by asking "Why?" five times until the underlying process or policy failure is revealed.
+* **Fishbone (Ishikawa) Diagram:** A visual tool used to categorize the potential causes of a problem (e.g., People, Process, Technology, Environment) to ensure no stone is left unturned.
+
+**Example:** If an analyst finds a virus on a laptop, the symptom is "Malware." The **Root Cause** might be "Obsolete firewall rules allowing unauthorized downloads."
+
+---
+
+## 3.2 The Lessons Learned Process
+Every incident is a free (albeit stressful) lesson. A formal **Post-Incident Review (PIR)** or "Post-Mortem" should be conducted after any major event.
+
+### Key Objectives of a PIR:
+* **What went well?** (e.g., "The SOAR playbook blocked the IP in 4 seconds.")
+* **Where did we struggle?** (e.g., "We couldn't find the owner of the affected server.")
+* **What must change?** (e.g., "We need to update our Asset Inventory database.")
+* **Knowledge Sharing:** Distributing findings to the wider IT and Security teams to prevent similar silos in the future.
+
+---
+
+## 3.3 SOC Metrics and KPIs
+You cannot improve what you do not measure. We track specific metrics to evaluate the health and speed of the SOC.
+
+### Core Metrics:
+* **Mean Time to Detect (MTTD):** The average time it takes for the SOC to become aware of a potential security incident. High MTTD suggests a lack of visibility or poor alerting.
+* **Mean Time to Respond (MTTR):** The average time taken to neutralize a threat once detected. High MTTR suggests manual bottlenecks or complex escalation paths.
+* **Dwell Time:** The total duration an attacker has a presence in the environment before being eradicated ($MTTD + MTTR$).
+
+---
+
+## 3.4 Continuous Improvement Lifecycle
+Aligned with **NIST SP 800-61**, post-incident activity feeds back into the **Preparation** phase. This creates a "Flywheel Effect" where the SOC becomes harder to compromise after every single attack.
+
+---
+
+## 4. Verification & Reflection
+- [x] Identified the difference between a technical symptom and a root cause.
+- [x] Explained how the "5 Whys" method reaches systemic failures.
+- [x] Defined MTTD and MTTR and how they impact the "Dwell Time" of an attacker.
+
+**Analyst Insight:** Post-incident analysis is often the most skipped step in a busy SOC, but it is actually the most important. If you don't do RCA, you are just treating the symptoms of a disease while the virus stays in the system.
