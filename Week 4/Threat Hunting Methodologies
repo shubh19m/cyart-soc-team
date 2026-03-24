@@ -1,0 +1,57 @@
+# Theoretical Knowledge: Threat Hunting Methodologies
+**Focus:** Proactive Defense & Frameworks  
+
+---
+
+## 1.1 Proactive Hunting vs. Reactive Response
+In a traditional SOC, analysts are **reactive**—they wait for a SIEM alert to fire. **Threat Hunting** is the proactive search through networks to detect isolated incidents that bypass existing security solutions.
+
+### The Hunting Loop:
+1. **Hypothesis:** Create a theory (e.g., "An attacker is using valid service accounts to move laterally").
+2. **Data Collection:** Gather logs (Sysmon, Windows Security, Firewall).
+3. **Execution:** Run queries to find anomalies.
+4. **Resolution:** If a threat is found, trigger IR; if not, use the findings to create a new automated detection rule.
+
+
+
+---
+
+## 1.2 Structured Hunting Frameworks
+To ensure hunting is consistent and measurable, we utilize industry-standard frameworks:
+
+### SqRR (Search, Query, Retrieve, Respond)
+A technical-focused workflow designed for rapid iteration:
+* **Search:** Identify the scope (e.g., specific subnets or high-value targets).
+* **Query:** Build the KQL/SQL queries.
+* **Retrieve:** Extract and normalize the data.
+* **Respond:** Document findings or update the SIEM.
+
+### TaHiTI (Targeted Hunting integrating Threat Intelligence)
+A methodology that places **Threat Intelligence** at the center of the hunt. It uses "Hunting Profiles" to target specific threat actors (e.g., APT29) based on their known TTPs (Tactics, Techniques, and Procedures).
+
+
+
+---
+
+## 1.3 Data Sources for Hunting
+Effective hunting requires high-fidelity telemetry. Key sources include:
+* **Endpoint (EDR/Sysmon):** Process trees, network connections, and registry changes.
+* **Network (Zeek/Suricata):** Identifying beacons, unusual protocols, or data spikes.
+* **Identity (AD/Okta):** Hunting for "Impossible Travel" or anomalous privilege escalations (T1078).
+* **Threat Intel (OTX/MISP):** Providing the "indicators" that guide where to look.
+
+---
+
+## 1.4 Key Objectives & Learning Path
+* **Goal:** Move from "Alert Triage" to "Threat Discovery."
+* **Case Study:** Analyzed **APT29 (Cozy Bear)** techniques within the MITRE ATT&CK framework, specifically focusing on how they use valid credentials to maintain a long-term presence.
+* **Resource:** Applied principles from the **SANS Reading Room** on "Effective Log Analysis" to build complex correlation queries.
+
+---
+
+## 4. Verification & Reflection
+- [x] Understood the difference between an IOC (Indicator of Compromise) and a TTP (Behavior).
+- [x] Defined the 4 stages of the SqRR framework.
+- [x] Identified 3 distinct data sources required for a "Valid Account Misuse" hunt.
+
+**Analyst Insight:** Threat hunting is not just about finding "bad guys"; it's a primary way to find **visibility gaps**. If a hunt fails because a certain log wasn't available, that gap becomes a priority for the engineering team.
