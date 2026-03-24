@@ -1,0 +1,34 @@
+# Theoretical Knowledge: Adversary Emulation Techniques
+**Focus:** TTP Simulation, MITRE Caldera, and Purple Teaming  
+
+---
+
+## 4.1 Understanding Adversary Emulation
+Adversary Emulation is the process of simulating the Tactics, Techniques, and Procedures (TTPs) of real-world threat actors. Unlike a standard penetration test, which focuses on finding any vulnerability, emulation focuses on specific known behaviors of certain groups (e.g., APT28 or FIN7).
+
+### Core TTPs for Emulation:
+* **T1566 - Phishing:** Simulating the delivery of a malicious attachment or link to test email gateway filters and user awareness.
+* **T1210 - Exploitation of Remote Services:** Testing if internal SIEM rules trigger when a service (like SMB or RDP) is exploited for lateral movement.
+* **T1059 - Command and Scripting Interpreter:** Executing obfuscated PowerShell or Python scripts to see if EDR/SIEM catches "Living off the Land" (LotL) activity.
+
+---
+
+## 4.2 Emulation Frameworks: MITRE Caldera
+MITRE Caldera is a powerful automated adversary simulation platform that uses the **ATT&CK** framework to build "Operations."
+
+
+
+### Why use Caldera?
+1. **Automation:** It can run complex multi-stage attacks (e.g., Initial Access -> Persistence -> Exfiltration) across hundreds of endpoints simultaneously.
+2. **Consistency:** It ensures that security controls are tested exactly the same way every time.
+3. **Customization:** Analysts can create "Abilities" (individual TTPs) to match emerging threats.
+
+---
+
+## 4.3 Purple Teaming: Red-Blue Collaboration
+Adversary emulation is the core of **Purple Teaming**. This is a collaborative effort where the **Red Team** (Offensive) and **Blue Team** (Defensive) work together in real-time.
+
+
+
+* **The Goal:** To close the gap between an attack happening and the SOC detecting it.
+* **The Outcome:** The Red Team executes a TTP, the Blue Team checks their logs, and if no alert is found, a new detection rule is written and tested immediately.
